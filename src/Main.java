@@ -16,10 +16,21 @@ public class Main {
             System.out.print("Enter choice: ");
             System.out.println("To find volume enter : 1");
             System.out.println("To find Closed box enter : 2");
+            try{
+                int choice = Integer.parseInt(input.nextLine());
+                switch(choice){
+                    case 1: b.Volume(length1,width1,height1); break;
+                    case 2: b.Area(length1,width1,height1); break;
+                    case 3: exit = true; break;
+                    default: System.out.println("Invalid choice"); break;
+                }
 
+            }catch (NumberFormatException e){
+                System.out.println("Please enter a valid choice");
+            }
         }
 
-        System.out.println( "this the totol voulnm"+ b.Volume(length1, width1, height1));
+       // System.out.println( "this the totol voulnm"+ b.Volume(length1, width1, height1));
 
     }
 }
