@@ -1,10 +1,26 @@
 import java.util.Scanner;
 
 class Box{
-    public double Volume(double length, double width, double height){
-        return (length * width * height);
+    double length;
+    double width;
+    double height;
+    int density = 2;
+
+    Box(double length, double width, double height){
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
-    public double Area(double length, double width, double height){
-        return (2*(length * width +length* height+ width*height));
+    double base_area(){
+        return length*width;
+    }
+    double Surface_area(){
+         return 2*(length * width + length * height + width * height);
+    }
+    Double Volume(){
+        return length*width*height;
+    }
+    Double Mass(){
+        return Volume()*density;
     }
 }
