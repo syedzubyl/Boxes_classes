@@ -1,10 +1,14 @@
 import java.util.Scanner;
 class Box{
-    double length;
-    double width;
-    double height;
-    int density = 2;
-
+    private final double length;
+    private final double width;
+    private double height;
+    private int density = 2;
+    //This for chose only Base Area
+    Box(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
     Box(double length, double width, double height, int density){
         this.length = length;
         this.width = width;
