@@ -1,4 +1,7 @@
-import java.util.Scanner;
+package main_resouces;
+
+import box_resouces.Box;
+
 public class Main {
     public static void main(String[] args) {
         Box box1 =new Box(10,5,4,2);
